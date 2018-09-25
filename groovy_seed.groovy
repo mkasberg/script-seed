@@ -1,9 +1,12 @@
 #!/usr/bin/env groovy
 
-def cli = new CliBuilder()
+def cli = new CliBuilder(
+    usage:'./groovy_seed.groovy [options]',
+    header:'Options:'
+)
 cli.with {
     h longOpt:'help', 'Prints this help information.'
-    n longOpt:'name', 'Greet this person.', args:1
+    t longOpt:'type', 'Plant this type of seed.', args:1
 }
 
 def opt = cli.parse(args)
@@ -13,9 +16,10 @@ if (opt.h) {
     return
 }
 
-def name = "world"
-if (opt.n) {
-    name = opt.n
+def type = "tomato"
+if (opt.t) {
+    type = opt.t
 }
 
-println("Hello, $name!")
+println("You planted a $type seed!")
+

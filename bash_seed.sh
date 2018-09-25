@@ -7,26 +7,26 @@ function print_usage {
     cat << EOF
 Usage: $0 [options]
 
-Write some usage instructions here.
+This is a bash script seed. Customize it to get started quickly with bash.
 
 Options:
   -h  Prints this help message.
-  -n  Greet this name.
+  -t  Specify the type of seed.
 
 EOF
 }
 
-NAME=world
+TYPE=tomato
 HELP=false
 
-while getopts hn: opt; do
+while getopts ht: opt; do
     case $opt in
         h)
             print_usage
             exit 0
             ;;
-        n)
-            NAME=$OPTARG
+        t)
+            TYPE=$OPTARG
             ;;
         *)
             print_usage
@@ -37,4 +37,5 @@ done
 
 # Put your script here.
 
-echo "Hello, $NAME!"
+echo "You planted a ${TYPE} seed!"
+

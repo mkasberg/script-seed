@@ -7,17 +7,17 @@
 $usage = <<<EOD
 Usage: {$argv[0]} [options]
 
-Put your instructions here.
+This is a PHP script seed. Customize it to get started quickly with PHP.
 
 Options:
 
   -h|--help  Prints this help information.
-  --name     The name to greet.
+  --type     Specify the type of seed.
 
 EOD;
 
 $shortOpts = 'h';
-$longOpts = array('help','name:');
+$longOpts = array('help','type:');
 $options = getopt($shortOpts, $longOpts);
 
 if (isset($options['h']) || isset($options['help'])) {
@@ -26,9 +26,10 @@ if (isset($options['h']) || isset($options['help'])) {
 }
 
 // Your script goes here.
-$name = "world";
-if (isset($options['name'])) {
-    $name = $options['name'];
+$type = "tomato";
+if (isset($options['type'])) {
+    $type = $options['type'];
 }
 
-print "Hello, $name!\n";
+print "You planted a $type seed!\n";
+
