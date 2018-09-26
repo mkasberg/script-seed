@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto Mono', serif;
+    background-color: #dddddd;
 }
 
 .wrapper {
@@ -21,4 +22,5 @@ body {
 h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 400%;
+    color: #52b21a;
 }
