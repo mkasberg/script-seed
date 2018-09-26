@@ -11,14 +11,18 @@
         <div class="content">
             <h1>🌱 Script Seed</h1>
             <p>Seed scripts for popular scripting languages.</p>
-            <ul>
-                <li><a href="seeds/bash_seed.sh">Bash</a></li>
-                <li><a href="seeds/python_seed.py">Python</a></li>
-                <li><a href="seeds/groovy_seed.groovy">Groovy</a></li>
-                <li><a href="seeds/php_seed.php">PHP</a></li>
-            </ul>
+            
+            <select id="langSelect">
+                <option value="seeds/bash_seed.sh">Bash</option>
+                <option value="seeds/python_seed.py">Python</option>
+                <option value="seeds/groovy_seed.groovy">Groovy</option>
+                <option value="seeds/php_seed.php">PHP</option>
+            </select>
+
+            <textarea id="source" readonly></textarea>
         </div>
     </div>
+
+    <script src="site/main.js"></script>
 </body>
 </html>
-
