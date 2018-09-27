@@ -3,23 +3,25 @@
     <meta charset="utf-8"/>
     <title>Script Seed</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="site/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
     <div class="wrapper">
         <div class="content">
             <h1>🌱 Script Seed</h1>
             <p>Seed scripts for popular scripting languages.</p>
-            
+
             <select id="langSelect">
                 <option value="seeds/bash_seed.sh">Bash</option>
                 <option value="seeds/python_seed.py">Python</option>
                 <option value="seeds/groovy_seed.groovy">Groovy</option>
                 <option value="seeds/php_seed.php">PHP</option>
             </select>
+            <a id="downloadButton" target="_blank"><i class="fas fa-download"></i></a>
 
-            <textarea id="source" readonly></textarea>
+            <textarea id="seedScript" readonly></textarea>
         </div>
     </div>
 

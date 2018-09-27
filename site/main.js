@@ -7,16 +7,17 @@ function onReady() {
     onChange("seeds/bash_seed.sh");
 }
 
-function onChange(source) {
-    fetch(source)
+function onChange(seed) {
+    fetch(seed)
     .then(function(response) {
         response.text().then(function(text) {
-            document.getElementById("source").value = text;
+            document.getElementById("seedScript").value = text;
+            document.getElementById("downloadButton").href = seed;
         });
 
     })
     .catch(function(error) {
-        console.error("Source request failed.", error.statusText);
+        console.error("Seed script request failed.", JSON.stringify(error));
     });
 }
 
