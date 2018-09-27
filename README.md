@@ -1,6 +1,6 @@
 # Script Seed
 
-🌱 Seed scripts for various languages.
+🌱 Seed scripts for popular scripting languages.
 
 https://mkasberg.github.io/script-seed/
 
@@ -10,4 +10,10 @@ https://mkasberg.github.io/script-seed/
   Use a [local test server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server)
   to develop this project locally. For example, `python3 -m http.server` or
   `python2 -m SimpleHTTPServer`.
+
+### Tests
+
+The `test.sh` script provides a very rudimentary test framework. Of course, the
+machine running the tests must support all of the scripting languages to be
+tested.
 
