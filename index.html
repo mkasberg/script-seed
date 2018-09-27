@@ -1,27 +1,49 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Script Seed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="site/style.css"/>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>Script Seed</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="content">
-            <h1>🌱 Script Seed</h1>
-            <p>Seed scripts for popular scripting languages.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <h1>🌱 Script Seed</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm text-center">
+                <p>Seed scripts for popular scripting languages.</p>
+            </div>
+        </div>
 
-            <select id="langSelect">
-                <option value="seeds/bash_seed.sh">Bash</option>
-                <option value="seeds/python_seed.py">Python</option>
-                <option value="seeds/groovy_seed.groovy">Groovy</option>
-                <option value="seeds/php_seed.php">PHP</option>
-            </select>
-            <a id="downloadButton" target="_blank"><i class="fas fa-download"></i></a>
+        <div class="row">
+            <div class="col-sm">
+                <select id="langSelect">
+                    <option value="seeds/bash_seed.sh">Bash</option>
+                    <option value="seeds/python_seed.py">Python</option>
+                    <option value="seeds/groovy_seed.groovy">Groovy</option>
+                    <option value="seeds/php_seed.php">PHP</option>
+                </select>
+            </div>
+            <div class="col-sm text-right">
+                <a id="downloadButton" class="btn btn-primary" role="button" target="_blank"><i class="fas fa-download"></i></a>
+            </div>
+        </div>
 
-            <textarea id="seedScript" readonly></textarea>
+        <div class="row">
+            <div class="col-sm">
+                <textarea id="seedScript" readonly></textarea>
+            </div>
         </div>
     </div>
 

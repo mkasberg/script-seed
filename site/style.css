@@ -3,29 +3,15 @@ body {
     background-color: #dddddd;
 }
 
-.wrapper {
-    display: table;
-    height: 100%;
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 85%;
-}
-
-.content {
-    display: table-cell;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-    text-align: center;
-}
-
 h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 400%;
     color: #52b21a;
+    padding: 20px;
 }
 
 #seedScript {
     width: 100%;
-    height: 400px;
+    height: 500px;
+    margin-top: 5px;
 }
