@@ -1,5 +1,7 @@
 # Script Seed
 
+[![Build Status](https://travis-ci.org/mkasberg/script-seed.svg?branch=master)](https://travis-ci.org/mkasberg/script-seed)
+
 🌱 Seed scripts for popular scripting languages.
 
 https://mkasberg.github.io/script-seed/
