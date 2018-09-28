@@ -14,17 +14,19 @@ python_seed.py"
 
 EXITCODE=0
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
 for SEED in $SEEDS; do
 
     # Test support for -h
-    RESULT=$(./seeds/${SEED} -h)    
+    RESULT=$($DIR/seeds/${SEED} -h)    
     if [ "$(echo $RESULT | grep -i -c "usage")" -eq 0 ]; then
         echo "FAIL: [$SEED -h] expected [usage] but got [$RESULT]"
         EXITCODE=1
     fi
 
     # Ensure no args works
-    RESULT=$(./seeds/${SEED})
+    RESULT=$($DIR/seeds/${SEED})
     if [ "$(echo $RESULT | grep -c "You planted a")" -eq 0 ]; then
         echo "FAIL: [$SEED] expected [You planted a] but got [$RESULT]"
         EXITCODE=1

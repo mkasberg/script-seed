@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+ - docker
+
+before_install:
+ - docker build -t script-seed:latest .
+
+script:
+ - docker run --rm -v $(pwd):/root/script-seed script-seed:latest /root/script-seed/test.sh
+
