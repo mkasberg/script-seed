@@ -11,7 +11,7 @@ function onChange(seed) {
     fetch(seed)
     .then(function(response) {
         response.text().then(function(text) {
-            document.getElementById("seedScript").value = text;
+            document.getElementById("seedScript").textContent = text;
             document.getElementById("downloadButton").href = seed;
         });
 
