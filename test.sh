@@ -7,19 +7,15 @@
 # For simple seed scripts, this should be enough to prevent us from breaking
 # things if we do some refactoring.
 
-SEEDS="bash_seed.sh
-groovy_seed.groovy
-php_seed.php
-python_seed.py"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+SEEDS=$(ls $DIR/seeds/*.*)
 
 EXITCODE=0
-
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 for SEED in $SEEDS; do
 
     # Test support for -h
-    RESULT=$($DIR/seeds/${SEED} -h)    
+    RESULT=$($DIR/seeds/${SEED} -h)
     if [ "$(echo $RESULT | grep -i -c "usage")" -eq 0 ]; then
         echo "FAIL: [$SEED -h] expected [usage] but got [$RESULT]"
         EXITCODE=1
@@ -35,4 +31,3 @@ for SEED in $SEEDS; do
 done
 
 exit $EXITCODE
-
