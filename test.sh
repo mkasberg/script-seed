@@ -15,14 +15,14 @@ EXITCODE=0
 for SEED in $SEEDS; do
 
     # Test support for -h
-    RESULT=$($DIR/seeds/${SEED} -h)
+    RESULT=$(${SEED} -h)
     if [ "$(echo $RESULT | grep -i -c "usage")" -eq 0 ]; then
         echo "FAIL: [$SEED -h] expected [usage] but got [$RESULT]"
         EXITCODE=1
     fi
 
     # Ensure no args works
-    RESULT=$($DIR/seeds/${SEED})
+    RESULT=$(${SEED})
     if [ "$(echo $RESULT | grep -c "You planted a")" -eq 0 ]; then
         echo "FAIL: [$SEED] expected [You planted a] but got [$RESULT]"
         EXITCODE=1
