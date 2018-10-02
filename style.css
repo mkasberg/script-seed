@@ -10,6 +10,10 @@ h1 {
     padding: 20px;
 }
 
+.fa-copy {
+    color: white;
+  }
+
 pre {
   margin-top: 10px;
 }
