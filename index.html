@@ -35,12 +35,14 @@
                 <select id="langSelect">
                     <option value="seeds/bash_seed.sh">Bash</option>
                     <option value="seeds/groovy_seed.groovy">Groovy</option>
+                    <option value="seeds/javascript_seed.js">JavaScript</option>
                     <option value="seeds/php_seed.php">PHP</option>
                     <option value="seeds/python_seed.py">Python</option>
                     <option value="seeds/ruby_seed.rb">Ruby</option>
                 </select>
             </div>
             <div class="col-sm text-right">
+                <a id="copyButton" class="btn btn-primary" role="button" onclick="copyToClipboard()"><i class="far fa-copy"></i></a>
                 <a id="downloadButton" class="btn btn-primary" role="button" target="_blank"><i class="fas fa-download"></i></a>
             </div>
         </div>
