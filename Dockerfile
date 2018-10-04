@@ -14,3 +14,10 @@ RUN curl -O https://downloads.lightbend.com/scala/2.12.2/scala-2.12.2.tgz && \
 ENV SCALA_HOME=/opt/scala-2.12.2
 ENV PATH="${PATH}:${SCALA_HOME}/bin"
 
+# Install Powershell.
+RUN curl -O https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    apt-get update && \
+    apt-get install -y powershell && \
+    rm packages-microsoft-prod.deb
+
