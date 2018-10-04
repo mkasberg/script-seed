@@ -23,13 +23,7 @@ function onChange(seed) {
 }
 
 function copyToClipboard() {
-  // Get the selected file, fetch it and copy write it to the clipboard.
-  const langSelect = document.getElementById("langSelect");
-  fetch(langSelect.value)
-    .then(res => res.text())
-    .then(text => {
-      navigator.clipboard.writeText(text);
-    });
+  navigator.clipboard.writeText(document.getElementById("seedScript").textContent);
 }
 
 onReady();
