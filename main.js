@@ -23,7 +23,24 @@ function onChange(seed) {
 }
 
 function copyToClipboard() {
-  navigator.clipboard.writeText(document.getElementById("seedScript").textContent);
+  // https://stackoverflow.com/questions/47931843/javascript-copy-to-clipboard-not-working
+
+  const element = document.getElementById('seedScript')
+  let range, selection, worked;
+
+  if (document.body.createTextRange) {
+    range = document.body.createTextRange();
+    range.moveToElementText(element);
+    range.select();
+  } else if (window.getSelection) {
+    selection = window.getSelection();
+    range = document.createRange();
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+
+  document.execCommand("copy");
 }
 
 onReady();
