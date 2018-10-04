@@ -17,3 +17,10 @@ h1 {
 pre {
   margin-top: 10px;
 }
+
+footer {
+    background-color: #999999;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
