@@ -31,5 +31,10 @@ if (isset($options['type'])) {
     $type = $options['type'];
 }
 
+$type = "Cucumber";
+if (isset($options['type'])) {
+    $type = $options['type'];
+}
+
 print "You planted a $type seed!\n";
 
