@@ -30,4 +30,12 @@ for SEED in $SEEDS; do
 
 done
 
+if [ "$EXITCODE" -eq 0 ]; then
+    echo -e "\n================="
+    echo "All tests PASSED!"
+else
+    echo -e "\n========================="
+    echo "One or more tests FAILED!"
+fi
+
 exit $EXITCODE
