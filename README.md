@@ -26,7 +26,16 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more info.
 
 ### Tests
 
-The `test.sh` script provides a very rudimentary test framework. Of course, the
-machine running the tests must support all of the scripting languages to be
-tested. The `Dockerfile` provides an environment where all the languages are
-pre-installed.
+If you have [Docker](https://www.docker.com/) installed, you can use the
+`test-with-docker.sh` script to run all the tests inside a Docker container:
+
+    $ sh test-with-docker.sh
+
+Inside the container, we run the `test.sh` script (which an also be run outside
+the container if you have all the dependencies installed). `test.sh` makes some
+simple assertions on all of our scripts:
+
+ * The script executes without throwing errors.
+ * The script produces a useful help message with the `-h` flag.
+ * The script is an executable text file (with a shebang).
+

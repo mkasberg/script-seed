@@ -20,4 +20,6 @@ Thank you for contributing to Script Seed! Here are some notes to help you out.
     * Add an option to the dropdown in `index.html`.
     * If necessary, install support for the language in the `Dockerfile` to
       allow for testing.
-
+* Your pull request will be automatically tested by
+  [Travis CI](https://travis-ci.org/mkasberg/script-seed). If you want to run
+  the tests locally, see the [README](https://github.com/mkasberg/script-seed).
