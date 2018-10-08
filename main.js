@@ -1,20 +1,66 @@
+let seedElement;
+const LANGUAGES = {
+  'bash': {
+    file: 'seeds/bash_seed.sh',
+    class: 'bash'  
+  },
+  'groovy': {
+    file: 'seeds/groovy_seed.groovy',
+    class: 'groovy'  
+  },
+  'javascript': {
+    file: 'seeds/javascript_seed.js',
+    class: 'javascript'  
+  },
+  'php': {
+    file: 'seeds/php_seed.php',
+    class: 'php'  
+  },
+  'python': {
+    file: 'seeds/python_seed.py',
+    class: 'python'  
+  },
+  'ruby': {
+    file: 'seeds/ruby_seed.rb',
+    class: 'ruby'  
+  },
+  'scala': {
+    file: 'seeds/scala_seed.scala',
+    class: 'scala'
+  }
+}
+
+function getFileForLanguage(language) {
+  return LANGUAGES[language].file;
+}
+
+function getClassForLanguage(language) {
+  return LANGUAGES[language].class;
+}
+
 function onReady() {
+  seedElement = document.getElementById("seedScript");
+
   const langSelect = document.getElementById("langSelect");
   langSelect.onchange = function() {
     onChange(langSelect.value);
   };
 
-  onChange("seeds/bash_seed.sh");
+  onChange("bash");
 }
 
-function onChange(seed) {
-  fetch(seed)
+function onChange(language) {
+  let languageFile = getFileForLanguage(language);
+  let languageClass = getClassForLanguage(language);
+  
+  fetch(languageFile)
     .then(function(response) {
       response.text().then(function(text) {
-        var seedElement = document.getElementById("seedScript");
         seedElement.textContent = text;
-        document.getElementById("downloadButton").href = seed;
+        seedElement.className = `${languageClass} hljs`;
         hljs.highlightBlock(seedElement);
+
+        document.getElementById("downloadButton").href = languageFile;
       });
     })
     .catch(function(error) {
