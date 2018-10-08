@@ -1,4 +1,4 @@
-#!/usr/bin/awk -E
+#!/usr/bin/gawk -E
 
 function print_usage(){
 	print "Usage: ./awk_seed.awk [options]"
