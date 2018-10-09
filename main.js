@@ -1,28 +1,32 @@
 let seedElement;
 const LANGUAGES = {
+  'awk': {
+      file: 'seeds/awk_seed.awk',
+      class: 'awk'
+  }
   'bash': {
     file: 'seeds/bash_seed.sh',
-    class: 'bash'  
+    class: 'bash'
   },
   'groovy': {
     file: 'seeds/groovy_seed.groovy',
-    class: 'groovy'  
+    class: 'groovy'
   },
   'javascript': {
     file: 'seeds/javascript_seed.js',
-    class: 'javascript'  
+    class: 'javascript'
   },
   'php': {
     file: 'seeds/php_seed.php',
-    class: 'php'  
+    class: 'php'
   },
   'python': {
     file: 'seeds/python_seed.py',
-    class: 'python'  
+    class: 'python'
   },
   'ruby': {
     file: 'seeds/ruby_seed.rb',
-    class: 'ruby'  
+    class: 'ruby'
   },
   'scala': {
     file: 'seeds/scala_seed.scala',
@@ -52,7 +56,7 @@ function onReady() {
 function onChange(language) {
   let languageFile = getFileForLanguage(language);
   let languageClass = getClassForLanguage(language);
-  
+
   fetch(languageFile)
     .then(function(response) {
       response.text().then(function(text) {
