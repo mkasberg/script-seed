@@ -3,7 +3,7 @@ const LANGUAGES = {
   'awk': {
       file: 'seeds/awk_seed.awk',
       class: 'awk'
-  }
+  },
   'bash': {
     file: 'seeds/bash_seed.sh',
     class: 'bash'
