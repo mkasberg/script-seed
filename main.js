@@ -31,6 +31,10 @@ const LANGUAGES = {
   'scala': {
     file: 'seeds/scala_seed.scala',
     class: 'scala'
+  },
+  'perl': {
+    file: 'seeds/perl_seed.pl',
+    class: 'perl'
   }
 }
 
