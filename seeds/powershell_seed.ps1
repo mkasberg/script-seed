@@ -1,31 +1,23 @@
+#!/usr/bin/env pwsh
+
 # Powershell script seed.
 # Use this to get started quickly, and customize it to your needs.
 
-function Usage {
-Write-Host 'This is a powershell script seed. Customize it to get started quickly with powershell.
+param (
+    [switch]$help = $false,
+    [string]$type = "tomato"
+)
+
+if ($help) {
+    Write-Host 'Usage: powershell_seed.ps1 [options]
+This is a PowerShell script seed. Customize it to get started quickly with PowerShell.
 
 Options:
     -h  Prints this help message.
     -t  Specify the type of seed.';
-}
-Usage;
-$wichOption = Read-Host -Prompt ' ';
-$seed = 'tomato';
 
-Switch ($wichOption) {
-    't' {
-        $tmp = Read-Host -Prompt ' ';
-        $seed = $tmp;
-    }
-    'h' {
-        Usage;
-        Pause
-    }
-    default {}
+    exit;
 }
 
-#  Your code goes here
-
-Write-Host 'You planted a ' -nonewline;
-Write-Host $seed -foregroundcolor 'Cyan' -nonewline;
-Write-Host ' seed.'
+#  Your code goes here.
+Write-Host 'You planted a $($type) seed.'
