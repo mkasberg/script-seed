@@ -4,7 +4,7 @@ WORKDIR /root
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
-    apt-get install -y curl groovy nodejs openjdk-8-jre-headless php python ruby
+    apt-get install -y curl gawk groovy nodejs openjdk-8-jre-headless php python ruby
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 # Install Scala from source.
@@ -20,4 +20,3 @@ RUN curl -O https://packages.microsoft.com/config/ubuntu/18.04/packages-microsof
     apt-get update && \
     apt-get install -y powershell && \
     rm packages-microsoft-prod.deb
-

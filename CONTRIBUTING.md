@@ -18,6 +18,9 @@ Thank you for contributing to Script Seed! Here are some notes to help you out.
     and we'll help you with the rest.
     * Add the seed script to `seeds/`.
     * Add an option to the dropdown in `index.html`.
+    * Add to `LANGUAGES` at the top of `main.js`.
     * If necessary, install support for the language in the `Dockerfile` to
       allow for testing.
-
+* Your pull request will be automatically tested by
+  [Travis CI](https://travis-ci.org/mkasberg/script-seed). If you want to run
+  the tests locally, see the [README](https://github.com/mkasberg/script-seed).
