@@ -7,16 +7,14 @@ use Pod::Usage;
 # Perl script seed.
 # Use this to get started quickly, and customize it to your needs.
 
-my $type = 'flower';
-my $man = 0;
 my $help = 0;
 my $water = 0;
-GetOptions( 'help|h' => \$help, 
-            'man' => \$man,
-            'water|w' => \$water,
-          );
-pod2usage(1) if $help;
-pod2usage(-exitstatus => 0, -verbose => 2) if $man;
+my $type = 'flower';
+GetOptions('help|h' => \$help,
+           'water|w' => \$water,
+           'type|t=s' => \$type
+);
+pod2usage(0) if $help;
 
 # Write your code below
 if ($water){
@@ -38,30 +36,17 @@ sub water_the_plant {
 
 # Write your perldoc below the __END__
 __END__
-
-=head1 NAME
-
-sample - Using Getopt::Long and Pod::Usage
-
 =head1 SYNOPSIS
 
-sample [options] [file ...]
+perl_seed.pl [options]
 
 =head1 OPTIONS
 
-=over 8
+=item B<-h|-help>
+Print a brief help message and exit.
 
-=item B<-help>
-Print a brief help message and exits.
+=item B<-w|-water>
+Water the plant.
 
-=item B<-man>
-Prints the manual page and exits.
-
-=back
-
-=head1 DESCRIPTION
-
-B<This program> will read the given input file(s) and do something
-useful with the contents thereof.
-
-=cut
+=item B<-t|-type>
+Specify the type of plant.
