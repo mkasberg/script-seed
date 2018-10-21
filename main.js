@@ -16,6 +16,10 @@ const LANGUAGES = {
     file: 'seeds/javascript_seed.js',
     class: 'javascript'
   },
+  'perl': {
+    file: 'seeds/perl_seed.pl',
+    class: 'perl'
+  },
   'php': {
     file: 'seeds/php_seed.php',
     class: 'php'
@@ -35,10 +39,6 @@ const LANGUAGES = {
   'scala': {
     file: 'seeds/scala_seed.scala',
     class: 'scala'
-  },
-  'perl': {
-    file: 'seeds/perl_seed.pl',
-    class: 'perl'
   }
 }
 
