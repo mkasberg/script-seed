@@ -20,6 +20,3 @@ RUN curl -O https://packages.microsoft.com/config/ubuntu/18.04/packages-microsof
     apt-get update && \
     apt-get install -y powershell && \
     rm packages-microsoft-prod.deb
-
-# Need to add execution to Perl script
-RUN chmod +x seeds/perl_seed.pl .
