@@ -20,33 +20,32 @@ pod2usage(-exitstatus => 0, -verbose => 2) if $man;
 
 # Write your code below
 if ($water){
-  water_the_plant(${type}) ;
+  water_the_plant($type) ;
 }
 else {
-  plant_a_seed(${type});
+  plant_a_seed($type);
 }
 
 sub plant_a_seed {
   my $seed = shift;
-  print "You planted a ${seed} seed!\n";
+  print "You planted a $seed seed!\n";
 }
 
 sub water_the_plant {
   my $plant = shift;
-  print "You watered the ${plant}.\n";
+  print "You watered the $plant.\n";
 }
 
 # Write your perldoc below the __END__
 __END__
 
 =head1 NAME
+
 sample - Using Getopt::Long and Pod::Usage
 
 =head1 SYNOPSIS
+
 sample [options] [file ...]
-  Options:
-    -help            brief help message
-    -man             full documentation
 
 =head1 OPTIONS
 
