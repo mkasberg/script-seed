@@ -39,6 +39,10 @@ const LANGUAGES = {
   'scala': {
     file: 'seeds/scala_seed.scala',
     class: 'scala'
+  },
+  'csharp': {
+    file: 'seeds/csharp_seed.cs',
+    class: 'csharp'
   }
 }
 
