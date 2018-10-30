@@ -4,7 +4,7 @@ WORKDIR /root
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
-    apt-get install -y curl gawk groovy nodejs openjdk-8-jre-headless php python ruby monodevelop
+    apt-get install -y curl gawk groovy mono-csharp-shell nodejs openjdk-8-jre-headless php python ruby 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 # Install Scala from source.

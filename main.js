@@ -8,6 +8,10 @@ const LANGUAGES = {
     file: 'seeds/bash_seed.sh',
     class: 'bash'
   },
+  'csharp': {
+    file: 'seeds/csharp_seed.cs',
+    class: 'csharp'
+  },
   'groovy': {
     file: 'seeds/groovy_seed.groovy',
     class: 'groovy'
@@ -39,10 +43,6 @@ const LANGUAGES = {
   'scala': {
     file: 'seeds/scala_seed.scala',
     class: 'scala'
-  },
-  'csharp': {
-    file: 'seeds/csharp_seed.cs',
-    class: 'csharp'
   }
 }
 
