@@ -2,6 +2,9 @@
 
 Thank you for contributing to Script Seed! Here are some notes to help you out.
 
+If you haven't finished the [README](README.md), read through the entire thing
+first to get your development environment set up.
+
 * If you're making improvements to an existing script, try to keep your commits
   concise, and explain the reason for the change in a [well
   written](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
