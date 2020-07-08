@@ -11,7 +11,7 @@ const LANGUAGES = {
   'bash_alt': {
     file: 'seeds/bash_alt_seed.sh',
     class: 'bash'
-  }
+  },
   'groovy': {
     file: 'seeds/groovy_seed.groovy',
     class: 'groovy'
