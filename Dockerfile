@@ -9,9 +9,9 @@ COPY main.js ./srv/
 COPY highlightjs/ ./srv/highlightjs
 COPY seeds ./srv/seeds
 
-ENTRYPOINT ./srv/test.sh && \
-	   cd srv && \
-           python2 -m SimpleHTTPServer
+CMD  ./srv/test.sh && \
+     cd srv && \
+     python2 -m SimpleHTTPServer
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
