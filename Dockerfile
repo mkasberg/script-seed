@@ -2,17 +2,21 @@ FROM ubuntu:20.04
 WORKDIR /root
 
 # set entrypoint and copy site stuff so that we can run the server in the docker container 
-ENTRYPOINT cd srv && python2 -m SimpleHTTPServer
+COPY test.sh ./srv/
 COPY style.css ./srv/
 COPY index.html ./srv/
 COPY main.js ./srv/
 COPY highlightjs/ ./srv/highlightjs
 COPY seeds ./srv/seeds
 
+ENTRYPOINT ./srv/test.sh && \
+	   cd srv && \
+           python2 -m SimpleHTTPServer
+
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install --no-install-recommends -y libicu-dev liblttng-ust0 wget gnupg2 curl gawk groovy nodejs openjdk-11-jre-headless php python ruby
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 # Install Scala from source.
 RUN curl -O https://downloads.lightbend.com/scala/2.13.3/scala-2.13.3.tgz && \
