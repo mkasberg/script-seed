@@ -12,16 +12,14 @@ Options:
 
 let type = 'tomato';
 const opts = process.argv.slice(2);
+const argv = require('yargs').argv
 
-switch (opts[0]) {
-  case '-h':
+if (argv.h) {
     print_usage();
-    break;
-  case '-t':
-    type = opts[1];
-    break;
-  default:
-    break;
+}
+
+if (argv.t){
+  type = argv.t;
 }
 
 console.log(`You planted a ${type} seed!`);

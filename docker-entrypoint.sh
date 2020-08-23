@@ -2,6 +2,8 @@
 set -e
 
 echo "Script Seed entrypoint called with [$1]"
+echo "Installing yargs for JavaScript..."
+npm install yargs
 
 if [[ "$1" == "test" ]]; then
     # Run tests and exit
@@ -14,6 +16,7 @@ if [[ "$1" == "server" ]]; then
     echo 'Serving Script Seed at http://localhost:8000'
     echo 'Press Crtl-C to stop'
     echo ''
+    cd script-seed
     exec python2 -m SimpleHTTPServer
 fi
 
