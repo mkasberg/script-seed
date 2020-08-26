@@ -1,25 +1,20 @@
 #!/usr/bin/env nodejs
 
-function print_usage() {
-  console.log(`Usage: javascript_seed.js [options]
+const yargs = require('yargs');
 
-This is a javascript script seed. Customize it to get started quickly with javascript.
+const options = yargs.scriptName('javascript_seed.js')
+  .usage('Usage: $0 [args]')
+  .help('h')
+  .alias('h', 'help')
+  .alias('t', 'type')
+  .default('t', 'tomato')
+  .describe('t', 'Specify the type of seed')
+  .version(false)
+  .epilogue("This is a javascript seed. Use it to get started quickly with a JS script.\nIt makes use of yargs: https://yargs.js.org")
+  .argv
 
-Options:
-  -h  Prints this help message
-  -t  Specify the type of seed.`)
+if (options.help) {
+    yargs.showHelp();
 }
 
-let type = 'tomato';
-const opts = process.argv.slice(2);
-const argv = require('yargs').argv
-
-if (argv.h) {
-    print_usage();
-}
-
-if (argv.t){
-  type = argv.t;
-}
-
-console.log(`You planted a ${type} seed!`);
+console.log(`You planted a ${options.type} seed!`);
