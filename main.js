@@ -106,3 +106,48 @@ function copyToClipboard() {
 }
 
 onReady();
+
+// darkmode script code
+const toggle=document.getElementById('toggle-button')
+const body=document.getElementsByTagName('body')[0];
+
+toggle.addEventListener('click',()=>{
+  changeToDarkMode();
+})
+
+function changeToDarkMode(){
+  x=sessionStorage['darkmode'];
+  if(x=='0'){
+    toggle.style="margin-left:25px;"
+    sessionStorage['darkmode']=1;
+    body.style="background-color:#5b6987;"
+    document.getElementById("toggle-container").style="background-color:blue;"
+    document.getElementsByTagName('footer')[0].style="background-color:#93c2db;"
+  }
+  else{
+    toggle.style="margin-left:0px;"
+    sessionStorage['darkmode']=0;
+    body.style="background-color: #dddddd;"
+    document.getElementById("toggle-container").style="background-color:grey;"
+    document.getElementsByTagName('footer')[0].style="background-color:#999999;"
+  }
+}
+
+function checkForDarkMode()
+{
+  x=sessionStorage['darkmode'];
+  if(x=='0'){
+    toggle.style="margin-left:0px;"
+    body.style="background-color: #dddddd;"
+    document.getElementById("toggle-container").style="background-color:grey;"
+    document.getElementsByTagName('footer')[0].style="background-color:#999999;"
+  }
+  else{
+    toggle.style="margin-left:25px;"
+    body.style="background-color:#5b6987;"
+    document.getElementById("toggle-container").style="background-color:blue;"
+    document.getElementsByTagName('footer')[0].style="background-color:#93c2db;"
+  }
+}
+
+checkForDarkMode();

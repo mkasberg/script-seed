@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 body {
     font-family: 'Roboto Mono', serif;
     background-color: #dddddd;
@@ -23,4 +25,34 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+#toggle-container{
+  width:55px;
+  height:30px;
+  background-color:grey;
+  border-radius:30px;
+  transition:all 300ms ease-in-out;
+  margin-top:2%;
+  margin-left:15px;
+}
+
+#toggle-bar{
+  display: flex;
+  margin-top:5%;
+}
+
+#toggle-bar p{
+  font-size:25px;
+  font-family: 'Nunito', sans-serif;
+}
+#toggle-button{
+  height:31px;
+  background:white;
+  border:none;
+  width:31px;
+  margin-bottom:5px;
+  float:left;
+  border-radius:50%;
+  transition:all 300ms ease-in-out;
 }
