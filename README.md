@@ -13,7 +13,7 @@ sample script in your favorite language.
 Script Seed needs **your** help! Please contribute by:
 
  * Adding a new scripting language. I want to include _everything_ that can be
-   run on Ubuntu with a shebang line.
+   run on Ubuntu with a `#!` line.
  * Improving existing script seeds. Each seed should be an example of best
    practices in the given language.
 
