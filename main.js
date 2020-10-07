@@ -8,10 +8,6 @@ const LANGUAGES = {
     file: 'seeds/bash_seed.sh',
     class: 'bash'
   },
-  'bash_alt': {
-    file: 'seeds/bash_alt_seed.sh',
-    class: 'bash'
-  },
   'erlang': {
     file: 'seeds/erlang_seed.erl',
     class: 'erlang'
