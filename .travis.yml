@@ -1,4 +1,8 @@
-sudo: required
+os: linux
+
+dist: focal
+
+language: minimal
 
 services:
  - docker
@@ -8,4 +12,3 @@ before_install:
 
 script:
  - docker run --rm -v $(pwd):/root/script-seed script-seed:latest /root/script-seed/test.sh
-
