@@ -12,10 +12,10 @@ h1 {
 
 .fa-copy {
     color: white;
-  }
+}
 
 pre {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 footer {
@@ -23,4 +23,98 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+
+/* Adding CSS for Toggle Switch for Dark Mode */
+
+.right-top-buttons {
+    align-items: center;
+}
+
+.switch-toggle {
+    display: inline-flex;
+    align-items: center;
+}
+
+.switch {
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+    position: relative;
+    display: inline-block;
+    width: 76px;
+    height: 34px;
+}
+
+.inner-switch {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5em;
+    font-weight: 600;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(46px);
+    -ms-transform: translateX(46px);
+    transform: translateX(46px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Adding CSS for Dark Mode */
+
+.dark,
+.dark * {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
 }
