@@ -12,6 +12,10 @@ const LANGUAGES = {
     file: 'seeds/bash_alt_seed.sh',
     class: 'bash'
   },
+  'erlang': {
+    file: 'seeds/erlang_seed.erl',
+    class: 'erlang'
+  },
   'groovy': {
     file: 'seeds/groovy_seed.groovy',
     class: 'groovy'
