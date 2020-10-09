@@ -20,6 +20,10 @@ const LANGUAGES = {
         file: 'seeds/javascript_seed.js',
         class: 'javascript'
     },
+	'julia': {
+        file: 'seeds/julia_seed.jl',
+        class: 'julia'
+    },
     'perl': {
         file: 'seeds/perl_seed.pl',
         class: 'perl'
