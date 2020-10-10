@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -39,6 +39,7 @@
                     <option value="erlang">Erlang</option>
                     <option value="groovy">Groovy</option>
                     <option value="javascript">JavaScript</option>
+					<option value="julia">Julia</option>
                     <option value="perl">Perl</option>
                     <option value="php">PHP</option>
                     <option value="powershell">PowerShell</option>
@@ -47,21 +48,25 @@
                     <option value="scala">Scala</option>
                 </select>
             </div>
-            <div class="col-sm text-right">
+            <div class="col-sm">
+                <form class="form-inline">
+                    <div class="custom-control custom-switch ml-auto">
+                        <input type="checkbox" class="custom-control-input" id="darkModeSwitch">
+                        <label class="custom-control-label" for="darkModeSwitch">Dark Mode</label>
+                    </div>
 
-                <div class="right-top-buttons">
-                    <span class="switch-toggle">DARK MODE:
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="inner-switch slider round">OFF</span>
-                    </label>
-                    </span>
-                    <a id="copyButton" class="btn btn-primary" role="button" onclick="copyToClipboard()"><i
-                            class="far fa-copy"></i></a>
-                    <a id="downloadButton" class="btn btn-primary" role="button" target="_blank"><i
-                            class="fas fa-download"></i></a>
-                </div>
+                    <div class="custom-control">
+                        <a id="copyButton" class="btn btn-primary" role="button" onclick="copyToClipboard()">
+                            <i class="far fa-copy"></i>
+                        </a>
+                    </div>
 
+                    <div class="custom-control">
+                        <a id="downloadButton" class="btn btn-primary" role="button" target="_blank">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </form>
             </div>
         </div>
 
