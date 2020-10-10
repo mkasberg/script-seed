@@ -113,14 +113,14 @@ function copyToClipboard() {
     document.execCommand("copy");
 }
 
-$("#darkModeSwitch").on("click", function() {
-    if ($("body").hasClass("dark")) {
-        $("body").removeClass("dark");
-        document.getElementById("codeStyle").href = "highlightjs/styles/atom-one-light.css";
-    } else {
-        $("body").addClass("dark");
+document.getElementById("darkModeSwitch").onclick = function(el) {
+    if (el.target.checked) {
+        document.body.className = "dark";
         document.getElementById("codeStyle").href = "highlightjs/styles/atom-one-dark.css";
+    } else {
+        document.body.className = "";
+        document.getElementById("codeStyle").href = "highlightjs/styles/atom-one-light.css";
     }
-});
+}
 
 onReady();
