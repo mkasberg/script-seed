@@ -25,7 +25,7 @@ const LANGUAGES = {
         class: 'julia'
     },
 	'lua': {
-        file: 'seeds/lua_seed.jl',
+        file: 'seeds/lua_seed.lua',
         class: 'lua'
     },
     'perl': {
