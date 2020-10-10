@@ -48,21 +48,25 @@
                     <option value="scala">Scala</option>
                 </select>
             </div>
-            <div class="col-sm text-right">
+            <div class="col-sm">
+                <form class="form-inline">
+                    <div class="custom-control custom-switch ml-auto">
+                        <input type="checkbox" class="custom-control-input" id="darkModeSwitch">
+                        <label class="custom-control-label" for="darkModeSwitch">Dark Mode</label>
+                    </div>
 
-                <div class="right-top-buttons">
-                    <span class="switch-toggle">DARK MODE:
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="inner-switch slider round">OFF</span>
-                    </label>
-                    </span>
-                    <a id="copyButton" class="btn btn-primary" role="button" onclick="copyToClipboard()"><i
-                            class="far fa-copy"></i></a>
-                    <a id="downloadButton" class="btn btn-primary" role="button" target="_blank"><i
-                            class="fas fa-download"></i></a>
-                </div>
+                    <div class="custom-control">
+                        <a id="copyButton" class="btn btn-primary" role="button" onclick="copyToClipboard()">
+                            <i class="far fa-copy"></i>
+                        </a>
+                    </div>
 
+                    <div class="custom-control">
+                        <a id="downloadButton" class="btn btn-primary" role="button" target="_blank">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </form>
             </div>
         </div>
 
