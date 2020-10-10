@@ -25,11 +25,14 @@ footer {
     margin-top: 20px;
 }
 
+.seedScript {
+    border-radius: 8px;
+}
+
 /* CSS for Dark Mode */
 
-.dark,
-.dark * {
-    background-color: #222;
+.dark {
+    background-color: #151921;
     color: #e6e6e6;
     border-color: #e6e6e6;
 }
