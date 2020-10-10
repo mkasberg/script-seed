@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 WORKDIR /root/
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y curl erlang gawk gnupg2 groovy julia libicu-dev liblttng-ust0 lua nodejs npm openjdk-11-jre-headless php python ruby vim wget
+    apt-get install --no-install-recommends -y curl erlang gawk gnupg2 groovy julia libicu-dev liblttng-ust0 lua5.3 liblua5.3-dev luarocks nodejs npm openjdk-11-jre-headless php python ruby vim wget
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 # Install Scala from source.
