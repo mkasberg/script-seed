@@ -36,3 +36,6 @@ footer {
     color: #e6e6e6;
     border-color: #e6e6e6;
 }
+.dark footer {
+    background-color: #000000;
+}
