@@ -11,14 +11,18 @@ Options:
   
   For more information: http://docs.julialang.org/en/v1/manual/getting-started .
   ";
-
-for option in ARGS
-		if option == "-h"
-			println("For help use -h before the filename");
-			println(usage);
-		else
-			println("You planted a ", option , " seed.")
-		end
+  
+if(length(ARGS)==0)
+	println("You planted a water seed.")
+else
+	for option in ARGS
+			if option == "-h"
+				println("For help use -h before the filename");
+				println(usage);
+			else
+				println("You planted a ", option , " seed.")
+			end
+	end
 end
 
 print("Thank you")
