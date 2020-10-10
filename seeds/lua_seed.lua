@@ -1,13 +1,13 @@
 #!/usr/bin/env lua
 
 usage = "\
-usage: lua [options] [filename] [args...] \
-This is a Julia script seed. Customize it to get started quickly with Julia.\
-Options:\
-  args     Specify the type of seed.\
-  options -h for help, -v for version and more switches can be found on official documentation.\
-  \
-  For more information: https://www.lua.org/manual/5.4/ .\
+	usage: lua [options] [filename] [args...] \
+	This is a Julia script seed. Customize it to get started quickly with Julia.\
+	Options:\
+	  args     Specify the type of seed.\
+	  options -h for help, -v for version and more switches can be found on official documentation.\
+	  \
+	  For more information: https://www.lua.org/manual/5.4/ .\
   ";
 
 if (#arg == 0) 
