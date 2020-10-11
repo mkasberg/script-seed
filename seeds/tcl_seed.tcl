@@ -1,4 +1,4 @@
-#!/usr/bin/env tcl
+#!/usr/bin/env tclsh
 
 set usage "usage: tclsh Options
 
