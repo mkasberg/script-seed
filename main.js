@@ -51,6 +51,10 @@ const LANGUAGES = {
     'scala': {
         file: 'seeds/scala_seed.scala',
         class: 'scala'
+    },
+	'tcl': {
+        file: 'seeds/tcl_seed.tcl',
+        class: 'tcl'
     }
 }
 
