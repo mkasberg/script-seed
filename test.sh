@@ -13,6 +13,7 @@ SEEDS=$(ls $DIR/seeds/*.*)
 EXITCODE=0
 
 for SEED in $SEEDS; do
+    echo "Testing $SEED"
 
     # Test support for -h
     RESULT=$(${SEED} -h)
@@ -25,6 +26,13 @@ for SEED in $SEEDS; do
     RESULT=$(${SEED})
     if [ "$(echo $RESULT | grep -c "You planted a")" -eq 0 ]; then
         echo "FAIL: [$SEED] expected [You planted a] but got [$RESULT]"
+        EXITCODE=1
+    fi
+
+    # Test support for -t
+    RESULT=$(${SEED} -t watermelon)
+    if [ "$(echo $RESULT | grep -c "watermelon seed")" -eq 0 ]; then
+        echo "FAIL: [$SEED -t watermelon] expected [watermelon seed] but got [$RESULT]"
         EXITCODE=1
     fi
 
