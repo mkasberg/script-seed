@@ -20,4 +20,4 @@ Options:
 }
 
 #  Your code goes here.
-Write-Host 'You planted a $($type) seed.'
+Write-Host "You planted a $($type) seed."
