@@ -12,6 +12,10 @@ const LANGUAGES = {
         file: 'seeds/erlang_seed.erl',
         class: 'erlang'
     },
+    'golang': {
+        file: 'seeds/go_seed.go',
+        class: 'golang'
+    },
     'groovy': {
         file: 'seeds/groovy_seed.groovy',
         class: 'groovy'

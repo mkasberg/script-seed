@@ -8,6 +8,7 @@ RUN apt-get update && \
     erlang\
     gawk\
     gnupg2\
+    golang\
     groovy\
     julia\
     libicu-dev\
