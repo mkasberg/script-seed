@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	typeSeed := flag.String("type", "tomato", "Specify the type of seed")
+	typeSeed := flag.String("t", "tomato", "Specify the type of seed")
 	flag.Usage = func() {
 
 		fmt.Printf("usage: %s [options]\n\nThis is a Golang script seed. Customize it to get started quickly with Golang.\n\nOptions:\n\n", os.Args[0])
