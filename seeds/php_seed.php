@@ -12,11 +12,11 @@ This is a PHP script seed. Customize it to get started quickly with PHP.
 Options:
 
   -h|--help  Prints this help information.
-  --type     Specify the type of seed.
+  -t|--type     Specify the type of seed.
 
 EOD;
 
-$shortOpts = 'h';
+$shortOpts = 'ht:';
 $longOpts = array('help','type:');
 $options = getopt($shortOpts, $longOpts);
 
@@ -27,6 +27,9 @@ if (isset($options['h']) || isset($options['help'])) {
 
 // Your script goes here.
 $type = "tomato";
+if (isset($options['t'])) {
+    $type = $options['t'];
+}
 if (isset($options['type'])) {
     $type = $options['type'];
 }
