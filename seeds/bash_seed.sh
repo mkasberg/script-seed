@@ -38,4 +38,3 @@ done
 # Put your script here.
 
 echo "You planted a ${TYPE} seed!"
-

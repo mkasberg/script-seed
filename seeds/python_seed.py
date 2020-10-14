@@ -12,4 +12,3 @@ args = parser.parse_args()
 print('You planted a {} seed!'.format(args.type))
 if args.water:
     print('You watered the plant.')
-

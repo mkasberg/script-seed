@@ -22,4 +22,3 @@ fi
 
 # No special options provided.
 exec "$@"
-

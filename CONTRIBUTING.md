@@ -73,4 +73,3 @@ If you want to add a language:
 * If you need help with the `Dockerfile` or HTML or JS, just open a PR with the script itself and we'll try to help you through the rest.
 * Your pull request will be automatically tested by
   [Travis CI](https://travis-ci.org/mkasberg/script-seed).
-

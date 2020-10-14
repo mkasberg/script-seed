@@ -35,4 +35,3 @@ if (isset($options['type'])) {
 }
 
 print "You planted a $type seed!\n";
-

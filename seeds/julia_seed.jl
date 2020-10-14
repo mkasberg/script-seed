@@ -1,17 +1,17 @@
 #!/usr/bin/env julia
 
 usage = "
-usage: julia [-switches] -- [filename] [args...] 
+usage: julia [-switches] -- [filename] [args...]
 
 This is a Julia script seed. Customize it to get started quickly with Julia.
 
 Options:
   args     Specify the type of seed.
   switches -h for help, -v for version and more switches can be found on official documentation.
-  
+
   For more information: http://docs.julialang.org/en/v1/manual/getting-started .
   ";
-  
+
 if(length(ARGS)==0)
 	println("You planted a water seed.")
 else
