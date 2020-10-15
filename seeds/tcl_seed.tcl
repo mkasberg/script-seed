@@ -6,8 +6,8 @@ This is a tcl script seed. Customize it to get started quickly with tcl.
 
 Options
   -h  Prints this help information
-  type Provide the type of seed to plant 
-  
+  type Provide the type of seed to plant
+
   For more information: https://www.tcl.tk/ .
   "
 

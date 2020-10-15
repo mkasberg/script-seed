@@ -33,7 +33,7 @@ languages available.
 
     $ make
     Usage: make [target]
-    
+
     Targets:
       help   Print this help message.
       image  Build the script-seed:latest Docker image.

@@ -22,4 +22,3 @@ if (opt.t) {
 }
 
 println("You planted a $type seed!")
-
