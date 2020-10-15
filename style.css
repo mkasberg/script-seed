@@ -3,11 +3,22 @@ body {
     background-color: #dddddd;
 }
 
+.github-fork-banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
 h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 400%;
     color: #52b21a;
     padding: 20px;
+}
+
+.lang-select {
+    max-width: 150px;
 }
 
 .fa-copy {
