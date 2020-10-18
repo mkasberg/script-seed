@@ -10,7 +10,6 @@ Usage: {$argv[0]} [options]
 Prints a message as an example of parsing CLI args in PHP.
 
 Options:
-
   -h|--help  Prints this help information.
   -t|--type  Specify the type of seed.
 

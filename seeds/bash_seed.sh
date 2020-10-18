@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# Bash script seed.
-# Use this to get started quickly, and customize it to your needs.
+# This is a Bash script seed.
+# Use it as a template for your own Bash script.
 
 function print_usage {
     cat << EOF
 Usage: $0 [options]
 
-This is a bash script seed. Customize it to get started quickly with bash.
+Prints a message as an example of parsing CLI args in Bash.
 
 Options:
   -h  Prints this help message.
