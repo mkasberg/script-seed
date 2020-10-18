@@ -1,21 +1,22 @@
 #!/usr/bin/env php
 <?php
 
-// A seed for a simple PHP script.
-// Use this to get started quickly, and modify it to suit your needs.
+// This is a PHP script seed.
+// Use it as a template for your own PHP script.
 
 $usage = <<<EOD
 Usage: {$argv[0]} [options]
 
-This is a PHP script seed. Customize it to get started quickly with PHP.
+Prints a message as an example of parsing CLI args in PHP.
 
 Options:
 
   -h|--help  Prints this help information.
-  -t|--type     Specify the type of seed.
+  -t|--type  Specify the type of seed.
 
 EOD;
 
+// Parse command line options.
 $shortOpts = 'ht:';
 $longOpts = array('help','type:');
 $options = getopt($shortOpts, $longOpts);
