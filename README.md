@@ -16,6 +16,8 @@ Script Seed needs **your** help! Please contribute by:
    run on Ubuntu with a `#!` line.
  * Improving existing script seeds. Each seed should be an example of best
    practices in the given language.
+ * Improving the look, feel, and usability of the [GitHub pages
+   site](https://mkasberg.github.io/script-seed/).
 
 See [CONTRIBUTING](CONTRIBUTING.md) for more info.
 

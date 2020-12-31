@@ -58,6 +58,10 @@ If you want to add a language:
 
 ## Tips for Contributing
 
+* If you have an idea for significant changes or improvements, opening an issue
+  first to discuss your idea will help us get on the same page so there's a
+  clear path to merging your pull request. But this isn't necessary for small
+  changes.
 * If you're making improvements to an existing script, try to keep your commits
   concise, and explain the reason for the change in a [well
   written](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
