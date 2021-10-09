@@ -8,6 +8,10 @@ const LANGUAGES = {
         file: 'seeds/bash_seed.sh',
         class: 'bash'
     },
+    'deno': {
+        file: 'seeds/deno_seed.js',
+        class: 'deno'
+    },
     'erlang': {
         file: 'seeds/erlang_seed.erl',
         class: 'erlang'
