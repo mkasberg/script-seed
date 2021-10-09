@@ -1,3 +1,6 @@
+#!/usr/bin/env deno
+//deno seed
+
 Deno.args.forEach((arg) => {
     switch (arg) {
         case '-sn':
