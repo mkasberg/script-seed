@@ -2,6 +2,15 @@ FROM ubuntu:20.04
 
 WORKDIR /root/
 ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y wget
+
+# Microsoft GPG keys for PowerShell
+# https://docs.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7
+RUN wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    rm packages-microsoft-prod.deb
+
 RUN apt-get update && \
     apt-get install --no-install-recommends -y\
     curl\
@@ -20,6 +29,7 @@ RUN apt-get update && \
     npm\
     openjdk-11-jre-headless\
     php\
+    powershell\
     python\
     ruby\
     tcl\
@@ -33,14 +43,6 @@ RUN curl -O https://downloads.lightbend.com/scala/2.13.3/scala-2.13.3.tgz && \
     rm scala-2.13.3.tgz
 ENV SCALA_HOME=/opt/scala-2.13.3
 ENV PATH="${PATH}:${SCALA_HOME}/bin"
-
-# Download Powershell binaries, as there is no Powershell package for 20.04 available yet
-RUN apt-get install --no-install-recommends -y libc6 libgcc1 libicu66 && \
-    curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-linux-x64.tar.gz && \
-    mkdir -p /opt/microsoft/powershell/7 && \
-    tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 && \
-    chmod +x /opt/microsoft/powershell/7/pwsh && \
-    ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 
 COPY docker-entrypoint.sh /
 
