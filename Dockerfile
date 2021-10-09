@@ -26,7 +26,6 @@ RUN apt-get update && \
     liblua5.3-dev\
     luarocks\
     nodejs\
-    npm\
     openjdk-11-jre-headless\
     php\
     powershell\
