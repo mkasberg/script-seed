@@ -2,8 +2,6 @@
 set -e
 
 echo "Script Seed entrypoint called with [$1]"
-echo "Installing yargs for JavaScript..."
-npm install yargs
 
 if [[ "$1" == "test" ]]; then
     # Run tests and exit
