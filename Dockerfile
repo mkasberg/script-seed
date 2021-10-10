@@ -38,13 +38,16 @@ ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 # Install Scala from source.
 RUN curl -O https://downloads.lightbend.com/scala/2.13.3/scala-2.13.3.tgz && \
-    curl -fsSL https://deno.land/x/install/install.sh | sh && mv /root/.deno/bin/deno /bin/deno && \
     tar -C /opt -xzf scala-2.13.3.tgz && \
     rm scala-2.13.3.tgz
 ENV SCALA_HOME=/opt/scala-2.13.3
 ENV PATH="${PATH}:${SCALA_HOME}/bin"
-ENV DENO_INSTALL="/home/${USER}/.deno"
+
+# Install Deno
+RUN curl -fsSL https://deno.land/x/install/install.sh | sh
+ENV DENO_INSTALL="/root/.deno"
 ENV PATH="${DENO_INSTALL}/bin:${PATH}"
+
 
 COPY docker-entrypoint.sh /
 
