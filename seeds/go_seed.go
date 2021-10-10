@@ -1,11 +1,13 @@
 //usr/bin/env go run "$0" "$@"; exit "$?"
 package main
-
 import (
 	"flag"
 	"fmt"
 	"os"
 )
+
+// This is a Go script seed.
+// Use it as a template for your own Go script.
 
 func main() {
 	name := flag.String("n", "world", "Specify the user's name.")
