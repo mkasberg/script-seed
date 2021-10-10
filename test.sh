@@ -16,7 +16,7 @@ for SEED in $SEEDS; do
     echo "Testing $SEED"
 
     # Test support for -h
-    RESULT=$(${SEED} -h)
+    RESULT=$(${SEED} -h 2>&1)
     if [ "$(echo $RESULT | grep -i -c "usage")" -eq 0 ]; then
         echo "FAIL: [$SEED -h] expected [usage] but got [$RESULT]"
         EXITCODE=1
@@ -24,15 +24,15 @@ for SEED in $SEEDS; do
 
     # Ensure no args works
     RESULT=$(${SEED})
-    if [ "$(echo $RESULT | grep -c "You planted a")" -eq 0 ]; then
-        echo "FAIL: [$SEED] expected [You planted a] but got [$RESULT]"
+    if [ "$(echo $RESULT | grep -c "You ran the")" -eq 0 ]; then
+        echo "FAIL: [$SEED] expected [You ran the] but got [$RESULT]"
         EXITCODE=1
     fi
 
-    # Test support for -t
-    RESULT=$(${SEED} -t watermelon)
-    if [ "$(echo $RESULT | grep -c "watermelon seed")" -eq 0 ]; then
-        echo "FAIL: [$SEED -t watermelon] expected [watermelon seed] but got [$RESULT]"
+    # Test support for -n
+    RESULT=$(${SEED} -n GitHub)
+    if [ "$(echo $RESULT | grep -c "Hello GitHub")" -eq 0 ]; then
+        echo "FAIL: [$SEED -n GitHub] expected [Hello GitHub] but got [$RESULT]"
         EXITCODE=1
     fi
 

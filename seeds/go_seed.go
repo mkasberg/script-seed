@@ -8,16 +8,14 @@ import (
 )
 
 func main() {
+	name := flag.String("n", "world", "Specify the user's name.")
 
-	typeSeed := flag.String("t", "tomato", "Specify the type of seed")
 	flag.Usage = func() {
-
-		fmt.Printf("usage: %s [options]\n\nThis is a Golang script seed. Customize it to get started quickly with Golang.\n\nOptions:\n\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "usage: %s [options]\n\nPrints a message as an example of parsing CLI args in Go.\n\nOptions:\n", os.Args[0])
 
 		flag.PrintDefaults()
 	}
 	flag.Parse()
 
-	fmt.Printf("You planted a %s seed!\n", *typeSeed)
-
+	fmt.Printf("Hello %s!\n\nYou ran the Go seed script!\n", *name)
 }

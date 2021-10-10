@@ -10,14 +10,14 @@ Usage: {$argv[0]} [options]
 Prints a message as an example of parsing CLI args in PHP.
 
 Options:
-  -h|--help  Prints this help information.
-  -t|--type  Specify the type of seed.
+  -h|--help       Prints this help information.
+  -n|--name NAME  Specify the user's name.
 
 EOD;
 
 // Parse command line options.
-$shortOpts = 'ht:';
-$longOpts = array('help','type:');
+$shortOpts = 'hn:';
+$longOpts = array('help','name:');
 $options = getopt($shortOpts, $longOpts);
 
 if (isset($options['h']) || isset($options['help'])) {
@@ -26,12 +26,13 @@ if (isset($options['h']) || isset($options['help'])) {
 }
 
 // Your script goes here.
-$type = "tomato";
-if (isset($options['t'])) {
-    $type = $options['t'];
+$name = "world";
+if (isset($options['n'])) {
+    $name = $options['n'];
 }
-if (isset($options['type'])) {
-    $type = $options['type'];
+if (isset($options['name'])) {
+    $name = $options['name'];
 }
 
-print "You planted a $type seed!\n";
+print "Hello $name!\n\n";
+print "You ran the PHP seed script!\n";

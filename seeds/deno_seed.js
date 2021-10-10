@@ -1,21 +1,27 @@
 #!/usr/bin/env -S deno run --allow-all
 import { parse } from "https://deno.land/std/flags/mod.ts";
 
+// This is a Deno script seed.
+// Use it as a template for your own Deno script.
+
 function print_usage() {
   console.log(`Usage: deno_seed.js [options]
 
-This is a deno script seed.
+  Prints a message as an example of parsing CLI args in Deno.
 
 Options:
--h Prints this help message
--t Specify the type of seed.`);
+  -h       Prints this help message.
+  -n NAME  Specify the user's name.`);
 }
 const Args = parse(Deno.args);
 
 if (Args.h) {
   print_usage();
-} else if (Args.t) {
-  console.log(`You planted a ${Args.t} seed`);
-} else {
-  console.log(`You planted a seed`);
+  Deno.exit(0);
 }
+
+const Name = Args.n || "world"
+console.log(`Hello ${Name}!
+
+You ran the Deno seed script!
+`);

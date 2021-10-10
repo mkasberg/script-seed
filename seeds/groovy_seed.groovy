@@ -9,7 +9,7 @@ def cli = new CliBuilder(
 )
 cli.with {
     h longOpt:'help', 'Prints this help information.'
-    t longOpt:'type', 'Plant the type of seed.', args:1
+    n longOpt:'name', "Specify the user's name.", args:1
 }
 
 def opt = cli.parse(args)
@@ -19,9 +19,10 @@ if (opt.h) {
     return
 }
 
-def type = "tomato"
-if (opt.t) {
-    type = opt.t
+def name = "world"
+if (opt.n) {
+    name = opt.n
 }
 
-println("You planted a $type seed!")
+println("Hello $name!\n")
+println("You ran the Groovy seed script!")

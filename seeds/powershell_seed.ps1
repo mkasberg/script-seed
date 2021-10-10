@@ -1,23 +1,25 @@
 #!/usr/bin/env pwsh
 
-# Powershell script seed.
-# Use this to get started quickly, and customize it to your needs.
+# This is a Powershell script seed.
+# Use it as a template for your own Powershell script.
 
 param (
     [switch]$help = $false,
-    [string]$type = "tomato"
+    [string]$name = "world"
 )
 
 if ($help) {
-    Write-Host 'Usage: powershell_seed.ps1 [options]
-This is a PowerShell script seed. Customize it to get started quickly with PowerShell.
+    Write-Host "Usage: powershell_seed.ps1 [options]
+Prints a message as an example of parsing CLI args in Powershell.
 
 Options:
-    -h  Prints this help message.
-    -t  Specify the type of seed.';
+  -h       Prints this help message.
+  -n NAME  Specify the user's name.";
 
     exit;
 }
 
 #  Your code goes here.
-Write-Host "You planted a $($type) seed."
+Write-Host "Hello $($name)!"
+Write-Host ""
+Write-Host "You ran the Powershell seed script!"

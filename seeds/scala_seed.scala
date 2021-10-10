@@ -1,22 +1,32 @@
 #!/usr/bin/env scala
 
+// This is a Scala script seed.
+// Use it as a template for your own Scala script.
+
 object ScalaSeed {
-  val usage = "Usage: scala_seed.scala [options]\n -h \tDisplay help\n -t \tProvide a type of seed"
+  val usage = """Prints a message as an example of parsing CLI args in Scala.
+                |Usage: scala_seed.scala [options]
+                |
+                |Options:
+                |  -h \tDisplay help.
+                |  -n \tSpecify the user's name.""".stripMargin
 
   def main(args: Array[String]) {
     if (args.length == 0) {
-      printSeedTypeMessage("tomato")
+      printMessage("world")
     }
     else {
       args(0) match {
         case "-h" => println(usage)
-        case "-t" => printSeedTypeMessage(args(1))
+        case "-n" => printMessage(args(1))
       }
     }
   }
 
-  def printSeedTypeMessage(plant: String) {
-    println("You planted a " + plant + " seed!")
+  def printMessage(name: String) {
+    val message = s"""Hello $name!
+                     |
+                     |You ran the Scala seed script!""".stripMargin
+    println(message)
   }
-
 }

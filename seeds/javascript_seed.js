@@ -3,15 +3,15 @@
 function print_usage() {
   console.log(`Usage: javascript_seed.js [options]
 
-This is a javascript script seed. Customize it to get started quickly with javascript.
+Prints a message as an example of parsing CLI args in Javascript.
 
 Options:
-  -h  Prints this help message
-  -t  Specify the type of seed.`
-  )
+  -h              Prints this help message
+  -n|--name NAME  Specify the user's name.`
+  );
 }
 
-let type = 'tomato';
+let userName = 'world';
 const opts = process.argv.slice(2);
 
 // Below, we parse arguments ourselves. This doesn't require any dependencies
@@ -22,8 +22,9 @@ if (opts.length > 0) {
     case '-h':
       print_usage();
       process.exit(0);
-    case '-t':
-      type = opts[1];
+    case '-n':
+    case '--name':
+      userName = opts[1];
       break;
     default:
       print_usage();
@@ -31,4 +32,6 @@ if (opts.length > 0) {
   }
 }
 
-console.log(`You planted a ${type} seed!`);
+console.log(`Hello ${userName}!
+
+You ran the Javascript seed script!`);

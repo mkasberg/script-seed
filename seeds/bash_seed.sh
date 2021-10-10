@@ -10,23 +10,23 @@ Usage: $0 [options]
 Prints a message as an example of parsing CLI args in Bash.
 
 Options:
-  -h  Prints this help message.
-  -t  Specify the type of seed.
+  -h       Prints this help message.
+  -n NAME  Specify the user's name.
 
 EOF
 }
 
-TYPE=tomato
+NAME=""
 HELP=false
 
-while getopts ht: opt; do
+while getopts hn: opt; do
     case $opt in
         h)
             print_usage
             exit 0
             ;;
-        t)
-            TYPE=$OPTARG
+        n)
+            NAME=$OPTARG
             ;;
         *)
             print_usage
@@ -36,5 +36,9 @@ while getopts ht: opt; do
 done
 
 # Put your script here.
+if [ "$NAME" == "" ]; then
+    NAME="world"
+fi
 
-echo "You planted a ${TYPE} seed!"
+echo -e "Hello $NAME!\n"
+echo "You ran the Bash seed script!"
