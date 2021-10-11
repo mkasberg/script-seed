@@ -18,7 +18,6 @@ RUN apt-get update && \
     gawk\
     gnupg2\
     golang\
-    groovy\
     julia\
     libicu-dev\
     liblttng-ust0\
@@ -35,6 +34,14 @@ RUN apt-get update && \
     vim\
     wget
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+# Install Groovy binaries
+# Groovy is in the Ubuntu repos but version 3+ has bugfixes that get rid of warnings.
+RUN wget https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-3.0.9.zip && \
+    unzip apache-groovy-binary-3.0.9.zip -d /opt && \
+    rm apache-groovy-binary-3.0.9.zip
+ENV GROOVY_HOME="/opt/groovy-3.0.9"
+ENV PATH="${PATH}:${GROOVY_HOME}/bin"
 
 # Install Scala from source.
 RUN curl -O https://downloads.lightbend.com/scala/2.13.3/scala-2.13.3.tgz && \
