@@ -6,8 +6,8 @@ If you haven't finished the [README](README.md), start there to understand how
 this project uses Docker. You don't need to have Docker installed to work with a
 single script, but you do need it to run the tests or work with all our scripts
 without installing all the dependencies. If you can't run the tests locally,
-[TravisCI](https://travis-ci.org/github/mkasberg/script-seed) will run them for
-you when you make a PR. Pay attention to the results.
+GitHub Actions will run them for you when you make a PR. Pay attention to the
+results.
 
 ## Test Suite
 
@@ -16,13 +16,14 @@ dependency on a lot of different languages). Use `make` to run the tests:
 
     $ make test
 
-Inside the container, we run the `test.sh` script (which an also be run outside
+Inside the container, we run the `test.sh` script (which can also be run outside
 the container if you have all the dependencies installed). `test.sh` makes some
 simple assertions on all of our scripts:
 
  * The script executes without throwing errors.
  * The script produces a useful help message with the `-h` flag.
  * The script is an executable text file (with a shebang).
+ * The script allows you to pass a name in with `-n NAME`.
 
 ## GitHub Pages Website
 
@@ -35,11 +36,13 @@ It's important to note that we have some Javascript code that makes async
 requests for the script resources themselves. Serving async requests over the
 `file://` protocol will not work in a browser, so we use a
 [local test server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server)
-to develop the website locally inside Docker.
+to develop the website locally inside Docker. Even while serving the site from
+Docker, you should be able to edit the files on the host computer in your
+favorite IDE.
 
 ## How to Add a Language
 
-I want this repository to have a "script seed" (an basic example script) for every language than can run on Linux with a `#!` line!
+I want this repository to have a "seed script" (an boilerplate script) for every language than can run on Linux with a `#!` line!
 
 If you want to add a language:
 
@@ -71,9 +74,6 @@ If you want to add a language:
   appropriate.
 * To pass our simple test harness, your script should print usage instructions
   when `-h` is passed.
-* Have fun with the message, but make sure it includes the string
-  `You planted a` when run with no args.
 * For simplicity and testing reasons, we only support languages that can be run as an executable text file (with a `#!`) on Ubuntu Linux.
 * If you need help with the `Dockerfile` or HTML or JS, just open a PR with the script itself and we'll try to help you through the rest.
-* Your pull request will be automatically tested by
-  [Travis CI](https://travis-ci.org/mkasberg/script-seed).
+* Your pull request will be automatically tested by GitHub Actions.
