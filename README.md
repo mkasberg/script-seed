@@ -2,10 +2,12 @@
 
 [![Build Status](https://travis-ci.org/mkasberg/script-seed.svg?branch=master)](https://travis-ci.org/mkasberg/script-seed)
 
-🌱 Seed scripts for popular scripting languages.
+🌱 Seed scripts for popular (and unpopular) scripting languages.
 
 Visit the **[website](https://mkasberg.github.io/script-seed/)** to find a
-sample script in your favorite language.
+sample script in your favorite language. The idea is to give you just enough
+boilerplate code to parse command line arguments and give you a sense of how the
+language works.
 
 
 ## Contributing
@@ -31,7 +33,8 @@ script that you can easily test yourself.
 
 A Makefile is provided so you can get started quickly with Docker. For example,
 simply run `make shell` to get an interactive prompt with all our supported
-languages available.
+languages available. You can leave that shell open to test your scripts while
+you edit them on the host machine in your favorite IDE.
 
     $ make
     Usage: make [target]
