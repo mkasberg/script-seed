@@ -15,6 +15,7 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y\
     curl\
     erlang\
+    gambas3\
     gawk\
     gnupg2\
     golang\
