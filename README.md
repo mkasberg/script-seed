@@ -1,8 +1,8 @@
 # Script Seed
 
-[![Build Status](https://travis-ci.org/mkasberg/script-seed.svg?branch=master)](https://travis-ci.org/mkasberg/script-seed)
-
 🌱 Seed scripts for popular (and unpopular) scripting languages.
+
+Also, a great way to experiment with [VS Code Dev Containers](https://code.visualstudio.com/docs/remote/containers).
 
 Visit the **[website](https://mkasberg.github.io/script-seed/)** to find a
 sample script in your favorite language. The idea is to give you just enough
@@ -25,16 +25,17 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more info.
 
 ## Developer Environment Setup
 
-You'll have the best experience on macOS or Linux. On Windows, some scripts will
-work if you have the appropriate language installed. Regardless of your
-platform, you'll probably find running scripts and/or the site itself inside a
-Docker container to be the best experience unless you're working with a single
-script that you can easily test yourself.
+This repository is configured with a [VS Code Dev
+Container](https://code.visualstudio.com/docs/remote/containers). You will have
+the best development experience if you use VS Code with the Remote Containers
+extension. In particular, every supported scripting language will be available
+in the dev container, and `bin/server` will work.
 
-A Makefile is provided so you can get started quickly with Docker. For example,
-simply run `make shell` to get an interactive prompt with all our supported
-languages available. You can leave that shell open to test your scripts while
-you edit them on the host machine in your favorite IDE.
+If you're **not** using VS Code, a Makefile is provided so you can get started
+quickly with the same Docker dev container. For example, simply run `make shell`
+to get an interactive prompt with all our supported languages available. You can
+leave that shell open to test your scripts while you edit them on the host
+machine in your favorite IDE.
 
     $ make
     Usage: make [target]
@@ -46,4 +47,3 @@ you edit them on the host machine in your favorite IDE.
       server Serve the website.
       shell  Open a shell inside the Docker container for manual testing.
       clean  Remove the Docker image.
-
