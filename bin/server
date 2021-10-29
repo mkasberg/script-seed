@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+# Start a webserver to preview the site
+cat << EOF
+
+Serving Script Seed at http://localhost:8000
+Press Ctrl-C to stop
+
+EOF
+
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd "$SCRIPT_DIR/.."
+exec python2 -m SimpleHTTPServer
