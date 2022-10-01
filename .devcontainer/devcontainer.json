@@ -4,8 +4,8 @@
 	"name": "Script Seed",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick an Ubuntu version: hirsute, focal, bionic
-		"args": { "VARIANT": "hirsute" }
+		// Update 'VARIANT' to pick an Ubuntu version: focal, bionic, etc
+		"args": { "VARIANT": "jammy" }
 	},
 
 	// Set *default* container specific settings.json values on container create.
