@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+import groovy.cli.commons.CliBuilder
+
 // This is a Groovy script seed.
 // Use it as a template for your own Groovy script.
 
