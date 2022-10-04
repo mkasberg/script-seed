@@ -11,7 +11,7 @@ object ScalaSeed {
                 |  -h \tDisplay help.
                 |  -n \tSpecify the user's name.""".stripMargin
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]) = {
     if (args.length == 0) {
       printMessage("world")
     }
@@ -23,7 +23,7 @@ object ScalaSeed {
     }
   }
 
-  def printMessage(name: String) {
+  def printMessage(name: String) = {
     val message = s"""Hello $name!
                      |
                      |You ran the Scala seed script!""".stripMargin

@@ -45,10 +45,10 @@ ENV GROOVY_HOME="/opt/groovy-3.0.9"
 ENV PATH="${PATH}:${GROOVY_HOME}/bin"
 
 # Install Scala from source.
-RUN curl -O https://downloads.lightbend.com/scala/2.13.3/scala-2.13.3.tgz && \
-    tar -C /opt -xzf scala-2.13.3.tgz && \
-    rm scala-2.13.3.tgz
-ENV SCALA_HOME=/opt/scala-2.13.3
+RUN curl -L -O https://github.com/lampepfl/dotty/releases/download/3.2.0/scala3-3.2.0.tar.gz && \
+    tar -C /opt -xzf scala3-3.2.0.tar.gz && \
+    rm scala3-3.2.0.tar.gz
+ENV SCALA_HOME=/opt/scala3-3.2.0
 ENV PATH="${PATH}:${SCALA_HOME}/bin"
 
 # Install Deno
