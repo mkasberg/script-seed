@@ -11,7 +11,7 @@ Prints a message as an example of parsing CLI args in Bash.
 
 Options:
   -h       Prints this help message.
-  -n NAME  Specify the user's name.
+  -n NAME  Specify the user’s name.
 
 EOF
 }
