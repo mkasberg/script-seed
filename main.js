@@ -2,71 +2,71 @@ let seedElement;
 const LANGUAGES = {
     'awk': {
         file: 'seeds/awk_seed.awk',
-        class: 'awk'
+        class: 'language-awk'
     },
     'bash': {
         file: 'seeds/bash_seed.sh',
-        class: 'bash'
+        class: 'language-bash'
     },
     'basic': {
         file: 'seeds/basic_seed.bas',
-        class: 'basic'
+        class: 'language-basic'
     },
     'deno': {
         file: 'seeds/deno_seed.js',
-        class: 'deno'
+        class: 'language-js'
     },
     'erlang': {
         file: 'seeds/erlang_seed.erl',
-        class: 'erlang'
+        class: 'language-erlang'
     },
     'golang': {
         file: 'seeds/go_seed.go',
-        class: 'golang'
+        class: 'language-go'
     },
     'groovy': {
         file: 'seeds/groovy_seed.groovy',
-        class: 'groovy'
+        class: 'language-groovy'
     },
     'javascript': {
         file: 'seeds/javascript_seed.js',
-        class: 'javascript'
+        class: 'language-js'
     },
 	'julia': {
         file: 'seeds/julia_seed.jl',
-        class: 'julia'
+        class: 'language-julia'
     },
 	'lua': {
         file: 'seeds/lua_seed.lua',
-        class: 'lua'
+        class: 'language-lua'
     },
     'perl': {
         file: 'seeds/perl_seed.pl',
-        class: 'perl'
+        class: 'language-perl'
     },
     'php': {
         file: 'seeds/php_seed.php',
-        class: 'php'
+        class: 'language-php'
     },
     'powershell': {
         file: 'seeds/powershell_seed.ps1',
-        class: 'powershell'
+        class: 'language-powershell'
     },
     'python': {
         file: 'seeds/python_seed.py',
-        class: 'python'
+        class: 'language-python'
     },
     'ruby': {
         file: 'seeds/ruby_seed.rb',
-        class: 'ruby'
+        class: 'language-ruby'
     },
     'scala': {
         file: 'seeds/scala_seed.scala',
-        class: 'scala'
+        class: 'language-scala'
     },
 	'tcl': {
         file: 'seeds/tcl_seed.tcl',
-        class: 'tcl'
+        class: 'language-tcl'
     }
 }
 
@@ -97,8 +97,8 @@ function onChange(language) {
         .then(function(response) {
             response.text().then(function(text) {
                 seedElement.textContent = text;
-                seedElement.className = `${languageClass} hljs`;
-                hljs.highlightBlock(seedElement);
+                seedElement.className = `${languageClass}`;
+                Prism.highlightElement(seedElement);
 
                 document.getElementById("downloadButton").href = languageFile;
             });
@@ -132,10 +132,10 @@ function copyToClipboard() {
 document.getElementById("darkModeSwitch").onclick = function(el) {
     if (el.target.checked) {
         document.body.className = "dark";
-        document.getElementById("codeStyle").href = "highlightjs/styles/atom-one-dark.css";
+        document.getElementById("codeStyle").href = "prismjs/styles/prism-one-dark.css";
     } else {
         document.body.className = "";
-        document.getElementById("codeStyle").href = "highlightjs/styles/atom-one-light.css";
+        document.getElementById("codeStyle").href = "prismjs/styles/prism-one-light.css";
     }
 }
 

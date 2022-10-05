@@ -60,6 +60,12 @@ If you want to add a language:
 
     https://github.com/mkasberg/script-seed/blob/7ee5e3fb830fc52d5c9cb1b490b8f8dbdb548c5b/main.js#L2-L6
 
+ 5. Re-download Prism.js with all the required languages (including the new
+    one). Update the link here to include the new language so it's easy to
+    update in the future.
+
+    https://prismjs.com/download.html#themes=prism&languages=markup+clike+javascript+awk+bash+basic+erlang+go+groovy+java+lua+markup-templating+perl+php+powershell+python+ruby+scala
+
 ## Tips for Contributing
 
 * If you have an idea for significant changes or improvements, opening an issue
