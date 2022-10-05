@@ -18,6 +18,7 @@ EOD;
 // Parse command line options.
 $shortOpts = 'hn:';
 $longOpts = array('help','name:');
+// See https://www.php.net/manual/en/function.getopt.php
 $options = getopt($shortOpts, $longOpts);
 
 if (isset($options['h']) || isset($options['help'])) {

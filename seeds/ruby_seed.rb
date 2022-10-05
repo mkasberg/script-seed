@@ -5,6 +5,7 @@ require 'optparse'
 # Use it as a template for your own Ruby script.
 
 name = 'world'
+# See https://ruby-doc.org/stdlib-2.7.0/libdoc/optparse/rdoc/OptionParser.html
 optparse = OptionParser.new do |opts|
   opts.banner = "Prints a message as an example of parsing CLI args in Ruby.\n"\
                 "Usage ruby_seed.rb [options]\n\n"
