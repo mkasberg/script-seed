@@ -3,6 +3,7 @@
 # This is an Awk script seed.
 # Use it as a template for your own Awk script.
 
+# see https://www.gnu.org/software/gawk/manual/gawk.html
 function print_usage(){
 	print "Usage: ./awk_seed.awk [options]"
 	print ""
