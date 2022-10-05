@@ -19,6 +19,7 @@ EOF
 NAME=""
 HELP=false
 
+# See https://man7.org/linux/man-pages/man1/getopts.1p.html
 while getopts hn: opt; do
     case $opt in
         h)
