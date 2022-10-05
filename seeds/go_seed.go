@@ -11,12 +11,14 @@ import (
 
 func main() {
 	name := flag.String("n", "world", "Specify the user's name.")
-
+	
+	// See https://pkg.go.dev/flag
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "usage: %s [options]\n\nPrints a message as an example of parsing CLI args in Go.\n\nOptions:\n", os.Args[0])
 
 		flag.PrintDefaults()
 	}
+	
 	flag.Parse()
 
 	fmt.Printf("Hello %s!\n\nYou ran the Go seed script!\n", *name)

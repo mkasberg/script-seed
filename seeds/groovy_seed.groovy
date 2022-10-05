@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 
+// See https://docs.groovy-lang.org/latest/html/gapi/groovy/cli/commons/CliBuilder.html
 import groovy.cli.commons.CliBuilder
 
 // This is a Groovy script seed.
