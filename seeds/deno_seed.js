@@ -13,6 +13,9 @@ Options:
   -h       Prints this help message.
   -n NAME  Specify the user's name.`);
 }
+
+// function parse - https://deno.land/std@0.158.0/flags/mod.ts?s=parse
+// parse options - https://deno.land/std@0.158.0/flags/mod.ts?s=ParseOptions
 const Args = parse(Deno.args);
 
 if (Args.h) {
@@ -20,7 +23,7 @@ if (Args.h) {
   Deno.exit(0);
 }
 
-const Name = Args.n || "world"
+const Name = Args.n || "world";
 console.log(`Hello ${Name}!
 
 You ran the Deno seed script!
