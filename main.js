@@ -114,17 +114,27 @@ function copyToClipboard() {
 }
 
 document.querySelector("#copyButton").addEventListener("click", () => {
-    const div = document.createElement("div");
-    div.innerHTML = `
+  const copyButtonContainer = document.querySelector("#copyButtonContainer");
+  const copyButtonIcon = document.querySelector("#copyButton").children[0];
+
+  copyButtonIcon.removeAttribute("class");
+  copyButtonIcon.classList.add("fas");
+  copyButtonIcon.classList.add("fa-check");
+
+  const div = document.createElement("div");
+  div.innerHTML = `
       <div class="toastContainer">
-          <p class="toastContainer_message">✔️ Copied.</p>
+          <p class="toastContainer_message">Copied.</p>
       </div>
   `;
-    document.body.append(div);
-    setTimeout(() => {
-      document.body.removeChild(div);
-    }, 3000);
-  });
+  copyButtonContainer.append(div);
+  setTimeout(() => {
+    copyButtonContainer.removeChild(div);
+    copyButtonIcon.removeAttribute("class");
+    copyButtonIcon.classList.add("far");
+    copyButtonIcon.classList.add("fa-copy");
+  }, 3000);
+});
 
 document.getElementById("darkModeSwitch").onclick = function(el) {
     if (el.target.checked) {
