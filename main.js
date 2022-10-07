@@ -113,6 +113,19 @@ function copyToClipboard() {
     navigator.clipboard.writeText(element.innerText);
 }
 
+document.querySelector("#copyButton").addEventListener("click", () => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <div class="toastContainer">
+          <p class="toastContainer_message">✔️ Copied.</p>
+      </div>
+  `;
+    document.body.append(div);
+    setTimeout(() => {
+      document.body.removeChild(div);
+    }, 3000);
+  });
+
 document.getElementById("darkModeSwitch").onclick = function(el) {
     if (el.target.checked) {
         document.body.className = "dark";
