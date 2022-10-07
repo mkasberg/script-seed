@@ -112,7 +112,7 @@ function copyToClipboard() {
     // https://stackoverflow.com/questions/47931843/javascript-copy-to-clipboard-not-working
 
     const element = document.getElementById('seedScript')
-    navigator.clipboard.writeText(element.innerHTML);
+    navigator.clipboard.writeText(element.innerText);
 }
 
 document.getElementById("darkModeSwitch").onclick = function(el) {
