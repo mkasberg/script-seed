@@ -11,7 +11,7 @@ Prints a message as an example of parsing CLI args in PHP.
 
 Options:
   -h|--help       Prints this help information.
-  -n|--name NAME  Specify the user's name.
+  -n|--name NAME  Specify the name of the user.
 
 EOD;
 
