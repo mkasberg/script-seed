@@ -62,10 +62,10 @@ footer {
 .toastContainer {
     margin: 0;
     display: grid;
-    position: fixed;
+    position: absolute;
     justify-items: end;
-    top: 1rem;
-    right: 1.5rem;
+    top: -2rem;
+    right: -0.75rem;
     gap: 1rem;
     background-color: #52b21a;
     padding: 0.5rem 1rem;
@@ -79,7 +79,7 @@ footer {
   }
   
   .toastContainer_message {
-    font-size: 1.5rem;
+    font-size: 0.5rem;
     font-weight: bold;
     line-height: 1;
   }
@@ -87,12 +87,10 @@ footer {
   @keyframes toastIt {
     0%,
     100% {
-      transform: translateY(-150%);
       opacity: 0;
     }
     10%,
     90% {
-      transform: translateY(0);
       opacity: 1;
     }
   }
