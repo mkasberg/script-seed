@@ -64,7 +64,7 @@ If you want to add a language:
     one). Update the link here to include the new language so it's easy to
     update in the future.
 
-    https://prismjs.com/download.html#themes=prism&languages=markup+clike+javascript+awk+bash+basic+erlang+go+groovy+java+lua+markup-templating+perl+php+powershell+python+ruby+scala
+    https://prismjs.com/download.html#themes=prism&languages=markup+clike+javascript+awk+bash+basic+erlang+go+groovy+java+lua+markup-templating+perl+php+powershell+python+ruby+scala+tcl
 
 ## Tips for Contributing
 
