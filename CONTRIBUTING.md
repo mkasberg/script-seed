@@ -5,6 +5,12 @@ Thank you for contributing to Script Seed! Here are some notes to help you out.
 If you haven't finished the [README](README.md), start there to understand how
 this project uses VS Code Dev Containers and Docker.
 
+## EditorConfig
+
+We have a [EditorConfig](https://editorconfig.org/) file to enforce a consistent
+code style. It's recommended to use an appropriate EditorConfig plugin for your
+IDE. We enforce our code style with a check in GitHub Actions.
+
 ## Test Suite
 
 The test suite can be run with `test.sh` inside the dev container:
