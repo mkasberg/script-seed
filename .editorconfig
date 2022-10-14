@@ -1,0 +1,38 @@
+# EditorConfig file: https://editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# 2 space indentation on all seed scripts
+[seeds/*]
+indent_style = space
+indent_size = 2
+
+# 2 space indentation on non-seed code
+[*.{html,js,css,sh,json,yml}]
+indent_style = space
+indent_size = 2
+
+[bin/server]
+indent_style = space
+indent_size = 2
+
+[Dockerfile]
+indent_style = space
+indent_size = 4
+
+# Makefiles require tabs
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+# Don't check library files
+[/{prismjs,bootstrap}/**]
+indent_style = unset
+indent_size = unset
