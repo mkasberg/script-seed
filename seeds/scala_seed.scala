@@ -5,11 +5,11 @@
 
 object ScalaSeed {
   val usage = """Prints a message as an example of parsing CLI args in Scala.
-                |Usage: scala_seed.scala [options]
-                |
-                |Options:
-                |  -h \tDisplay help.
-                |  -n \tSpecify the user's name.""".stripMargin
+    |Usage: scala_seed.scala [options]
+    |
+    |Options:
+    |  -h \tDisplay help.
+    |  -n \tSpecify the user's name.""".stripMargin
 
   def main(args: Array[String]) = {
     if (args.length == 0) {
@@ -25,8 +25,8 @@ object ScalaSeed {
 
   def printMessage(name: String) = {
     val message = s"""Hello $name!
-                     |
-                     |You ran the Scala seed script!""".stripMargin
+      |
+      |You ran the Scala seed script!""".stripMargin
     println(message)
   }
 }

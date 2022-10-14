@@ -9,8 +9,9 @@ use Pod::Usage;
 
 my $help = 0;
 my $name = 'world';
-GetOptions('help|h' => \$help,
-           'name|n=s' => \$name
+GetOptions(
+  'help|h' => \$help,
+  'name|n=s' => \$name
 );
 pod2usage(0) if $help;
 
