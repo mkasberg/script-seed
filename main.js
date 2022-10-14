@@ -32,11 +32,11 @@ const LANGUAGES = {
         file: 'seeds/javascript_seed.js',
         class: 'language-js'
     },
-	'julia': {
+  'julia': {
         file: 'seeds/julia_seed.jl',
         class: 'language-julia'
     },
-	'lua': {
+  'lua': {
         file: 'seeds/lua_seed.lua',
         class: 'language-lua'
     },
@@ -64,7 +64,7 @@ const LANGUAGES = {
         file: 'seeds/scala_seed.scala',
         class: 'language-scala'
     },
-	'tcl': {
+  'tcl': {
         file: 'seeds/tcl_seed.tcl',
         class: 'language-tcl'
     }

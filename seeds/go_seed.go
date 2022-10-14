@@ -1,25 +1,25 @@
 //usr/bin/env go run "$0" "$@"; exit "$?"
 package main
 import (
-	"flag"
-	"fmt"
-	"os"
+  "flag"
+  "fmt"
+  "os"
 )
 
 // This is a Go script seed.
 // Use it as a template for your own Go script.
 
 func main() {
-	name := flag.String("n", "world", "Specify the user's name.")
-	
-	// See https://pkg.go.dev/flag
-	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "usage: %s [options]\n\nPrints a message as an example of parsing CLI args in Go.\n\nOptions:\n", os.Args[0])
+  name := flag.String("n", "world", "Specify the user's name.")
 
-		flag.PrintDefaults()
-	}
-	
-	flag.Parse()
+  // See https://pkg.go.dev/flag
+  flag.Usage = func() {
+    fmt.Fprintf(os.Stderr, "usage: %s [options]\n\nPrints a message as an example of parsing CLI args in Go.\n\nOptions:\n", os.Args[0])
 
-	fmt.Printf("Hello %s!\n\nYou ran the Go seed script!\n", *name)
+    flag.PrintDefaults()
+  }
+
+  flag.Parse()
+
+  fmt.Printf("Hello %s!\n\nYou ran the Go seed script!\n", *name)
 }
