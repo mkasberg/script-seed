@@ -1,4 +1,4 @@
-/**
+/* /**
  * One Dark theme for prism.js
  * Based on Atom's One Dark theme: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
  */
@@ -75,7 +75,7 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
 	padding: 0.2em 0.3em;
 	border-radius: 0.3em;
 	white-space: normal;
@@ -83,6 +83,7 @@ pre[class*="language-"] {
 
 /* Print */
 @media print {
+
 	code[class*="language-"],
 	pre[class*="language-"] {
 		text-shadow: none;
@@ -129,7 +130,7 @@ pre[class*="language-"] {
 .token.inserted,
 .token.regex,
 .token.attr-value,
-.token.attr-value > .token.punctuation {
+.token.attr-value>.token.punctuation {
 	color: hsl(95, 38%, 62%);
 }
 
@@ -144,8 +145,8 @@ pre[class*="language-"] {
 }
 
 /* HTML overrides */
-.token.attr-value > .token.punctuation.attr-equals,
-.token.special-attr > .token.attr-value > .token.value.css {
+.token.attr-value>.token.punctuation.attr-equals,
+.token.special-attr>.token.attr-value>.token.value.css {
 	color: hsl(220, 14%, 71%);
 }
 
@@ -159,11 +160,11 @@ pre[class*="language-"] {
 }
 
 .language-css .token.function,
-.language-css .token.url > .token.function {
+.language-css .token.url>.token.function {
 	color: hsl(187, 47%, 55%);
 }
 
-.language-css .token.url > .token.string.url {
+.language-css .token.url>.token.string.url {
 	color: hsl(95, 38%, 62%);
 }
 
@@ -177,7 +178,7 @@ pre[class*="language-"] {
 	color: hsl(286, 60%, 67%);
 }
 
-.language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+.language-javascript .token.template-string>.token.interpolation>.token.interpolation-punctuation.punctuation {
 	color: hsl(5, 48%, 51%);
 }
 
@@ -192,16 +193,16 @@ pre[class*="language-"] {
 
 /* MD overrides */
 .language-markdown .token.url,
-.language-markdown .token.url > .token.operator,
-.language-markdown .token.url-reference.url > .token.string {
+.language-markdown .token.url>.token.operator,
+.language-markdown .token.url-reference.url>.token.string {
 	color: hsl(220, 14%, 71%);
 }
 
-.language-markdown .token.url > .token.content {
+.language-markdown .token.url>.token.content {
 	color: hsl(207, 82%, 66%);
 }
 
-.language-markdown .token.url > .token.url,
+.language-markdown .token.url>.token.url,
 .language-markdown .token.url-reference.url {
 	color: hsl(187, 47%, 55%);
 }
@@ -227,7 +228,7 @@ pre[class*="language-"] {
 .language-markdown .token.strike .token.content,
 .language-markdown .token.strike .token.punctuation,
 .language-markdown .token.list.punctuation,
-.language-markdown .token.title.important > .token.punctuation {
+.language-markdown .token.title.important>.token.punctuation {
 	color: hsl(355, 65%, 65%);
 }
 
@@ -263,26 +264,26 @@ pre[class*="language-"] {
 
 /* Toolbar plugin overrides */
 /* Space out all buttons and move them away from the right edge of the code block */
-div.code-toolbar > .toolbar.toolbar > .toolbar-item {
+div.code-toolbar>.toolbar.toolbar>.toolbar-item {
 	margin-right: 0.4em;
 }
 
 /* Styling the buttons */
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>button,
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>a,
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>span {
 	background: hsl(220, 13%, 26%);
 	color: hsl(220, 9%, 55%);
 	padding: 0.1em 0.4em;
 	border-radius: 0.3em;
 }
 
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
-div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:hover,
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:focus,
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:hover,
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:focus,
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:hover,
+div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:focus {
 	background: hsl(220, 13%, 28%);
 	color: hsl(220, 14%, 71%);
 }
@@ -300,12 +301,13 @@ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
 	color: hsl(220, 14%, 71%);
 	padding: 0.1em 0.6em;
 	border-radius: 0.3em;
-	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); /* same as Toolbar plugin default */
+	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+	/* same as Toolbar plugin default */
 }
 
 /* Hovering over a linkable line number (in the gutter area) */
 /* Requires Line Numbers plugin as well */
-pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows>span:hover:before {
 	background-color: hsla(220, 100%, 80%, 0.04);
 }
 
@@ -317,8 +319,8 @@ pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > spa
 }
 
 /* Stuff in the gutter */
-.line-numbers .line-numbers-rows > span:before,
-.command-line .command-line-prompt > span:before {
+.line-numbers .line-numbers-rows>span:before,
+.command-line .command-line-prompt>span:before {
 	color: hsl(220, 14%, 45%);
 }
 
@@ -350,41 +352,41 @@ pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > spa
 
 /* Diff Highlight plugin overrides */
 /* Taken from https://github.com/atom/github/blob/master/styles/variables.less */
-pre.diff-highlight > code .token.token.deleted:not(.prefix),
-pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+pre.diff-highlight>code .token.token.deleted:not(.prefix),
+pre>code.diff-highlight .token.token.deleted:not(.prefix) {
 	background-color: hsla(353, 100%, 66%, 0.15);
 }
 
-pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
-pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
-pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
-pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+pre.diff-highlight>code .token.token.deleted:not(.prefix)::-moz-selection,
+pre.diff-highlight>code .token.token.deleted:not(.prefix) *::-moz-selection,
+pre>code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+pre>code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
 	background-color: hsla(353, 95%, 66%, 0.25);
 }
 
-pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection,
-pre.diff-highlight > code .token.token.deleted:not(.prefix) *::selection,
-pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection,
-pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
+pre.diff-highlight>code .token.token.deleted:not(.prefix)::selection,
+pre.diff-highlight>code .token.token.deleted:not(.prefix) *::selection,
+pre>code.diff-highlight .token.token.deleted:not(.prefix)::selection,
+pre>code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
 	background-color: hsla(353, 95%, 66%, 0.25);
 }
 
-pre.diff-highlight > code .token.token.inserted:not(.prefix),
-pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+pre.diff-highlight>code .token.token.inserted:not(.prefix),
+pre>code.diff-highlight .token.token.inserted:not(.prefix) {
 	background-color: hsla(137, 100%, 55%, 0.15);
 }
 
-pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
-pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
-pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
-pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+pre.diff-highlight>code .token.token.inserted:not(.prefix)::-moz-selection,
+pre.diff-highlight>code .token.token.inserted:not(.prefix) *::-moz-selection,
+pre>code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+pre>code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
 	background-color: hsla(135, 73%, 55%, 0.25);
 }
 
-pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection,
-pre.diff-highlight > code .token.token.inserted:not(.prefix) *::selection,
-pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection,
-pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
+pre.diff-highlight>code .token.token.inserted:not(.prefix)::selection,
+pre.diff-highlight>code .token.token.inserted:not(.prefix) *::selection,
+pre>code.diff-highlight .token.token.inserted:not(.prefix)::selection,
+pre>code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 	background-color: hsla(135, 73%, 55%, 0.25);
 }
 
@@ -438,3 +440,5 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 .prism-previewer-easing.prism-previewer-easing circle {
 	fill: transparent;
 }
+
+*/
